@@ -54,7 +54,7 @@ router.post('/', (req, res) => {
       if (req.body.tagIds.length) {
         const productTagIdArr = req.body.tagIds.map((tag_id) => {
           return {
-            product_id: product.id,
+            product_id: product.product_id,
             tag_id,
           };
         });
@@ -82,7 +82,7 @@ router.put('/:product_id', (req, res) => {
       if (req.body.tagIds && req.body.tagIds.length) {
         
         ProductTag.findAll({
-          where: { product_id: req.params.id }
+          where: { product_id: req.params.product_id }
         }).then((productTags) => {
           // create filtered list of new tag_ids
           const productTagIds = productTags.map(({ tag_id }) => tag_id);
@@ -90,7 +90,7 @@ router.put('/:product_id', (req, res) => {
           .filter((tag_id) => !productTagIds.includes(tag_id))
           .map((tag_id) => {
             return {
-              product_id: req.params.id,
+              product_id: req.params.product_id,
               tag_id,
             };
           });
