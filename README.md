@@ -1,4 +1,4 @@
-# E-Commerce Back End
+# [E-Commerce Back End](https://drive.google.com/file/d/1_ReyIyQa-u4aJecxztAkq_pNyLME4xBM/view)
 
 This project is the back end for an e-commerce site. It provides a RESTful API built with Express.js, Sequelize, and PostgreSQL. The API allows for managing products, categories, and tags, including creating, reading, updating, and deleting these entities.
 
@@ -86,7 +86,7 @@ npm start
 
 ## Walkthrough Video
 
-[Click me]()
+[Click me](https://drive.google.com/file/d/1_ReyIyQa-u4aJecxztAkq_pNyLME4xBM/view)
 
 ## Questions
 
